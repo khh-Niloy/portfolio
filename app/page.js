@@ -1,12 +1,10 @@
 import Banner from "@/components/Banner";
-import FeaturedSection from "@/components/FeaturedSection";
-import Image from "next/image";
-// #000319
+import FeaturedSection from "@/components/FeaturedSection/FeaturedSection";
 export default function Home() {
   return (
     <>
-      <Banner></Banner>
-      <FeaturedSection></FeaturedSection>
+      <Banner />
+      <FeaturedSection />
     </>
   );
 }
