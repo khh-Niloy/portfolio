@@ -25,12 +25,14 @@ export default function Banner() {
         </div>
         <button
           className={`mt-5 rounded-xl py-3 px-6 bg-gradient-to-r from-[#161A31] to-[#06091F] 
-            font-light border-t border-[#6971A266] text-white text-[14px] transition-transform duration-500 
-            hover:scale-[1.02]`}
+            font-light border-t border-l border-[#6971A266] text-white text-[14px] hover:bg-gradient-to-r
+             hover:from-[#22284a]
+             hover:to-[#06091F] hover:duration-300 hover:transition-all  transition-transform duration-500 
+            hover:scale-[1.02] cursor-pointer group`}
         >
           <div className="flex justify-center items-center gap-1">
             See my work{" "}
-            <ArrowUpRight className="hover:translate-x-0.5 transition-transform duration-500" />
+            <ArrowUpRight className="group-hover:translate-x-0.5 transition-transform duration-500" />
           </div>
         </button>
       </div>
