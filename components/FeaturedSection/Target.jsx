@@ -8,7 +8,7 @@ export default function Target() {
         code aligns with <br />{" "}
         <span className="text-blue-500">industry best practices</span>.
       </h1>
-      <img src="/grid.svg" className="w-4xl absolute -top-3 -right-26" alt="" />
+      <img src="/grid.svg" className="absolute -top-3 -right-26" alt="" />
       <div className="absolute -top-3 -right-26">
         <img
           src="/target.png"
