@@ -43,7 +43,9 @@ export default function TechStack() {
         className="px-8 flex items-center justify-start gap-7 border-[0.1px] border-emerald-500/75
        bg-emerald-500/10 py-2 rounded-2xl "
       >
-        <h1 className="text-lg font-semibold text-white">Currently learning</h1>
+        <h1 className="text-lg font-semibold text-emerald-500">
+          Currently learning
+        </h1>
         <div className="flex gap-5">
           <div className=" flex flex-col items-center justify-center w-12">
             <RiNextjsFill className="text-[1.6rem] text-[white] " />
