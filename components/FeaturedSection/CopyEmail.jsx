@@ -1,8 +1,26 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
 import { Copy } from "lucide-react";
+import confetti from "../../public/confetti";
+import Lottie from "lottie-react";
 
 export default function CopyEmail() {
+  const [clickCopy, setclickCopy] = useState(false);
+
+  function handleCopy() {
+    setclickCopy(true);
+    navigator.clipboard
+      .writeText("khhniloy0@gmail.com")
+      .then((res) =>
+        setTimeout(() => {
+          setclickCopy(false);
+        }, 3000)
+      )
+      .catch((err) => console.log(err));
+  }
+
   return (
     <>
       <BackgroundGradientAnimation>
@@ -12,9 +30,21 @@ export default function CopyEmail() {
             <h1 className="">
               Do you want to start <br /> a project together?
             </h1>
-            <button className="mt-2 flex items-center gap-2 text-[10px] font-light bg-gradient-to-r from-[#161A31] to-[#06091fb8] px-3 py-2 rounded-md cursor-pointer">
+            {clickCopy && (
+              <Lottie
+                animationData={confetti}
+                loop={false}
+                autoplay={true}
+                style={{ width: 300, height: 300 }}
+                className="absolute"
+              />
+            )}
+            <button
+              onClick={handleCopy}
+              className="mt-4 flex items-center gap-2 text-[10px] font-light bg-gradient-to-r from-[#161A31] to-[#06091fb8] px-3 py-2 rounded-md cursor-pointer duration-500"
+            >
               <Copy strokeWidth={1} size={13} />{" "}
-              <span>Copy my email address</span>
+              <span>{clickCopy ? "Copied!" : "Copy my email address"}</span>
             </button>
           </div>
         </div>
