@@ -6,6 +6,7 @@ import { SiExpress } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { GlowingEffect } from "../../components/ui/glowing-effect";
 
 export default function TechStack() {
   return (

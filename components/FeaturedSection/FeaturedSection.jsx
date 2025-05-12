@@ -4,6 +4,7 @@ import ProjectImages from "./ProjectImages";
 import TechStack from "./TechStack";
 import Target from "./Target";
 import CopyEmail from "./CopyEmail";
+import { GlowingEffect } from "../../components/ui/glowing-effect";
 
 export default function FeaturedSection() {
   return (
@@ -14,7 +15,7 @@ export default function FeaturedSection() {
         <CopyEmail />
       </div>
       <div
-        className="col-start-1 relative col-end-3 overflow-hidden row-start-7 rounded-2xl bg-[#05091e] border border-[#3637499d]
+        className="col-start-1 relative col-end-3 overflow-hidden row-start-7 rounded-2xl  bg-[#05091e] border border-[#3637499d]
        row-end-10 text-white"
       >
         <Target />
@@ -24,8 +25,24 @@ export default function FeaturedSection() {
       >
         <ProjectImages />
       </div>
-      <div className="col-start-3 col-end-7 row-start-7 row-end-13 bg-gray-800 text-white p-4">
-        Div 4
+      <div className="col-start-3 col-end-7 relative row-start-7 rounded-2xl row-end-13 bg-[#05091e] border border-[#3637499d] text-white">
+        <div className="relative h-full rounded-2xl p-2 md:rounded-3xl md:p-3">
+          <GlowingEffect
+            blur={0}
+            borderWidth={2}
+            spread={40}
+            glow={true}
+            disabled={false}
+            proximity={64}
+            inactiveZone={0.01}
+          />
+          <h1 className="text-2xl font-semibold p-5 mt-16">
+            Currently building a <br /> JS Animation library
+          </h1>
+          <div className="w-[60%] absolute bottom-0 right-0">
+            <img src="/b5.svg" className="object-cover" alt="" />
+          </div>
+        </div>
       </div>
       <div
         className="col-start-4 col-end-7 row-start-4 row-end-7 border-t border-[#363749dc]
