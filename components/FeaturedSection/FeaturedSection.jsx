@@ -10,7 +10,7 @@ export default function FeaturedSection() {
   return (
     <div className="grid grid-cols-6 grid-rows-12 gap-5 w-[85%] p-4 mx-auto">
       <div
-        className={` col-start-1 col-end-3 row-start-10 relative row-end-13 text-white overflow-hidden rounded-2xl`}
+        className={`col-start-1 col-end-3 row-start-10 relative row-end-13 text-white overflow-hidden rounded-2xl`}
       >
         <CopyEmail />
       </div>
@@ -48,13 +48,35 @@ export default function FeaturedSection() {
         className="col-start-4 col-end-7 row-start-4 row-end-7 border-t border-[#363749dc]
        bg-[#04071d] rounded-2xl text-white"
       >
-        <TechStack />
+        <div className="relative rounded-2xl">
+          <GlowingEffect
+            blur={0}
+            borderWidth={2}
+            spread={40}
+            glow={true}
+            disabled={false}
+            proximity={64}
+            inactiveZone={0.01}
+          />
+          <TechStack />
+        </div>
       </div>
       <div
         className="col-start-4 col-end-7 row-start-1 relative row-end-4 text-white rounded-2xl 
       flex items-end border-t-[1.5px] border-l-[1.5px] border-[#3637497D]"
       >
-        <SocialLinks />
+        <div className=" rounded-2xl">
+          <GlowingEffect
+            blur={0}
+            borderWidth={2}
+            spread={40}
+            glow={true}
+            disabled={false}
+            proximity={64}
+            inactiveZone={0.01}
+          />
+          <SocialLinks />
+        </div>
       </div>
     </div>
   );
