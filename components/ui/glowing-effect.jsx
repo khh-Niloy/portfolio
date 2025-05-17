@@ -86,7 +86,6 @@ const GlowingEffect = memo(
 
     useEffect(() => {
       if (disabled) return;
-
       if (typeof document !== "undefined" && document.body) {
         const handleScroll = () => handleMove();
         const handlePointerMove = (e) => handleMove(e);
