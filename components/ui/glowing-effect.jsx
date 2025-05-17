@@ -96,11 +96,16 @@ const GlowingEffect = memo(
         });
 
         return () => {
-          if (animationFrameRef.current) {
-            cancelAnimationFrame(animationFrameRef.current);
+          if (
+            typeof window !== "undefined" &&
+            typeof document !== "undefined"
+          ) {
+            if (animationFrameRef.current) {
+              cancelAnimationFrame(animationFrameRef.current);
+            }
+            window.removeEventListener("scroll", handleScroll);
+            document.body.removeEventListener("pointermove", handlePointerMove);
           }
-          window.removeEventListener("scroll", handleScroll);
-          document.body.removeEventListener("pointermove", handlePointerMove);
         };
       }
     }, [handleMove, disabled]);
