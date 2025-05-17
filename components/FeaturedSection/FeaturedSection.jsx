@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import SocialLinks from "./SocialLinks";
 import ProjectImages from "./ProjectImages";

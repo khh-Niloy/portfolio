@@ -87,21 +87,23 @@ const GlowingEffect = memo(
     useEffect(() => {
       if (disabled) return;
 
-      const handleScroll = () => handleMove();
-      const handlePointerMove = (e) => handleMove(e);
+      if (typeof document !== "undefined" && document.body) {
+        const handleScroll = () => handleMove();
+        const handlePointerMove = (e) => handleMove(e);
 
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      document.body.addEventListener("pointermove", handlePointerMove, {
-        passive: true,
-      });
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        document.body.addEventListener("pointermove", handlePointerMove, {
+          passive: true,
+        });
 
-      return () => {
-        if (animationFrameRef.current) {
-          cancelAnimationFrame(animationFrameRef.current);
-        }
-        window.removeEventListener("scroll", handleScroll);
-        document.body.removeEventListener("pointermove", handlePointerMove);
-      };
+        return () => {
+          if (animationFrameRef.current) {
+            cancelAnimationFrame(animationFrameRef.current);
+          }
+          window.removeEventListener("scroll", handleScroll);
+          document.body.removeEventListener("pointermove", handlePointerMove);
+        };
+      }
     }, [handleMove, disabled]);
 
     return (
