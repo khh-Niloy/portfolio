@@ -13,7 +13,6 @@ export default function Banner() {
           </div>
           <div className="w-[61%] flex flex-col items-start">
             <TextGenerateEffect
-              // Obsessed with the Why |br| Committed to the How
               words="Obsessed with the 'Why', |br| Committed to the 'How'"
               speed={50}
               delay={500}
