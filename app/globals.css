@@ -51,3 +51,7 @@ body {
     transform: translateY(-50%);
   }
 }
+
+.js-tilt-glare-inner {
+  background: #000319ba !important; /* Red glare with 30% opacity */
+}
