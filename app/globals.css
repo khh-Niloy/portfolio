@@ -52,6 +52,21 @@ body {
   }
 }
 
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -30%) scale(1);
+  }
+}
+
+@theme inline {
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+
 .js-tilt-glare-inner {
   background: #000319ba !important; /* Red glare with 30% opacity */
 }
