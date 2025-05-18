@@ -1,27 +1,41 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Copy } from "lucide-react";
-import confetti from "../../public/confetti";
-import Lottie from "lottie-react";
 import toast from "react-hot-toast";
+import dynamic from "next/dynamic";
+
+// Dynamically import Lottie with no SSR
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function CopyMail() {
-  const [clickCopy, setclickCopy] = useState(false);
+  const [clickCopy, setClickCopy] = useState(false);
+  const [confettiAnimation, setConfettiAnimation] = useState(null);
+
+  // Load the confetti animation data client-side only
+  useEffect(() => {
+    import("../../public/confetti").then((module) => {
+      setConfettiAnimation(module.default);
+    });
+  }, []);
 
   function handleCopy() {
-    setclickCopy(true);
-    navigator.clipboard
-      .writeText("khhniloy0@gmail.com")
-      .then((res) =>
-        setTimeout(() => {
-          setclickCopy(false);
-        }, 3000)
-      )
-      .catch((err) => {
-        toast.error("Something went wrong");
-        console.log(err);
-      });
+    setClickCopy(true);
+
+    // Only run in browser environment
+    if (typeof navigator !== "undefined") {
+      navigator.clipboard
+        .writeText("khhniloy0@gmail.com")
+        .then(() =>
+          setTimeout(() => {
+            setClickCopy(false);
+          }, 3000)
+        )
+        .catch((err) => {
+          toast.error("Something went wrong");
+          console.log(err);
+        });
+    }
   }
 
   return (
@@ -32,9 +46,9 @@ export default function CopyMail() {
           <h1 className="">
             Do you want to start <br /> a project together?
           </h1>
-          {clickCopy && (
+          {clickCopy && confettiAnimation && (
             <Lottie
-              animationData={confetti}
+              animationData={confettiAnimation}
               loop={false}
               autoplay={true}
               style={{ width: 300, height: 300 }}
