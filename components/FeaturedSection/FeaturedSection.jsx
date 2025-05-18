@@ -3,7 +3,7 @@ import SocialLinks from "./SocialLinks";
 import ProjectImages from "./ProjectImages";
 import TechStack from "./TechStack";
 import Target from "./Target";
-// import CopyEmail from "./CopyEmail";
+import CopyEmail from "./CopyEmail";
 import { GlowingEffect } from "../../components/ui/glowing-effect";
 import CopyMail from "../CopyMail/CopyMail";
 
@@ -13,8 +13,8 @@ export default function FeaturedSection() {
       <div
         className={`col-start-1 col-end-3 row-start-10 relative row-end-13 text-white overflow-hidden rounded-2xl`}
       >
-        {/* <CopyEmail /> */}
-        <CopyMail></CopyMail>
+        <CopyEmail />
+        {/* <CopyMail></CopyMail> */}
       </div>
       <div
         className="col-start-1 relative col-end-3 overflow-hidden row-start-7 rounded-2xl  bg-[#05091e] border border-[#3637499d]
