@@ -9,11 +9,11 @@ import { GlowingEffect } from "../../components/ui/glowing-effect";
 export default function FeaturedSection() {
   return (
     <div className="grid grid-cols-6 grid-rows-12 gap-5 w-[85%] p-4 mx-auto">
-      {/* <div
+      <div
         className={`col-start-1 col-end-3 row-start-10 relative row-end-13 text-white overflow-hidden rounded-2xl`}
       >
         <CopyEmail />
-      </div> */}
+      </div>
       <div
         className="col-start-1 relative col-end-3 overflow-hidden row-start-7 rounded-2xl  bg-[#05091e] border border-[#3637499d]
        row-end-10 text-white"
