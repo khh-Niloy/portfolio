@@ -11,22 +11,18 @@ export default function CopyEmail() {
   const [clickCopy, setclickCopy] = useState(false);
 
   function handleCopy() {
-    if (typeof navigator !== "undefined" && navigator.clipboard) {
-      setclickCopy(true);
-      navigator.clipboard
-        .writeText("khhniloy0@gmail.com")
-        .then((res) =>
-          setTimeout(() => {
-            setclickCopy(false);
-          }, 3000)
-        )
-        .catch((err) => {
-          toast.error("Something went wrong");
-          console.log(err);
-        });
-    } else {
-      toast.error("Clipboard not available");
-    }
+    setclickCopy(true);
+    navigator.clipboard
+      .writeText("khhniloy0@gmail.com")
+      .then((res) =>
+        setTimeout(() => {
+          setclickCopy(false);
+        }, 3000)
+      )
+      .catch((err) => {
+        toast.error("Something went wrong");
+        console.log(err);
+      });
   }
 
   return (
