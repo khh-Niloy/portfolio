@@ -5,14 +5,12 @@ import { Copy } from "lucide-react";
 import toast from "react-hot-toast";
 import dynamic from "next/dynamic";
 
-// Dynamically import Lottie with no SSR
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function CopyMail() {
   const [clickCopy, setClickCopy] = useState(false);
   const [confettiAnimation, setConfettiAnimation] = useState(null);
 
-  // Load the confetti animation data client-side only
   useEffect(() => {
     import("../../public/confetti").then((module) => {
       setConfettiAnimation(module.default);
@@ -22,7 +20,6 @@ export default function CopyMail() {
   function handleCopy() {
     setClickCopy(true);
 
-    // Only run in browser environment
     if (typeof navigator !== "undefined") {
       navigator.clipboard
         .writeText("khhniloy0@gmail.com")
@@ -40,8 +37,8 @@ export default function CopyMail() {
 
   return (
     <>
-      {/* <BackgroundGradientAnimation> */}
       <div className="absolute top-0 h-full w-full rounded-2xl bg-black/30 z-50"></div>
+      <img src="/grid.svg" className="absolute -top-3 -right-26 z-50" alt="" />
       <div className="absolute z-50 inset-0 flex items-center -bottom-10 justify-center h-full text-white font-semibold px-4 text-center">
         <div className="flex flex-col items-center justify-center">
           <h1 className="">
@@ -67,7 +64,6 @@ export default function CopyMail() {
           </button>
         </div>
       </div>
-      {/* </BackgroundGradientAnimation> */}
     </>
   );
 }
