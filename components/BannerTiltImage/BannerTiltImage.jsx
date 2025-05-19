@@ -25,12 +25,12 @@ export default function BannerTiltImage() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-cente">
       <div
         ref={tiltRef}
         className="lg:mt-3 flex flex-col border-[10px] border-[#000319] items-center justify-center mx-auto rounded-full hover:shadow-2xl duration-500 relative overflow-hidden"
       >
-        <div className="overflow-hidden border border-black w-full rounded-full h-[23rem]">
+        <div className="overflow-hidden border-[10px] border-[black]/30 w-full rounded-full h-[23rem]">
           <img
             className="hover:scale-[1.9] -translate-y-8 duration-300 scale-[1.7] translate-x-[0.7rem] w-full object-cover h-[23rem] rounded-full"
             src="/myimage.jpg"

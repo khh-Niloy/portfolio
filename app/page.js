@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <div
         className={cn(
-          "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
+          "[background-size:40px_40px] select-none",
           "[background-image:linear-gradient(to_right,#d9d7d709_0.5px,transparent_1px),linear-gradient(to_bottom,#d9d7d709_0.5px,transparent_1px)]"
         )}
       >
