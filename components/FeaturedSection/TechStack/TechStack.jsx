@@ -125,7 +125,7 @@ export default function TechStack() {
         <h1 className="text-2xl font-semibold mb-4">Skills</h1>
         <div className="text-sm flex items-center">
           🟢 <GoArrowRight />{" "}
-          <span className="ml-1.5">Working with and building</span>
+          <span className="ml-1.5">Currently working with and building</span>
         </div>
       </div>
 
