@@ -1,10 +1,11 @@
 import React from "react";
 import SocialLinks from "./SocialLinks";
 import ProjectImages from "./ProjectImages";
-import TechStack from "./TechStack";
+import Education from "./Education";
 import Target from "./Target";
 import CopyEmail from "./CopyEmail";
 import { GlowingEffect } from "../../components/ui/glowing-effect";
+import TechStack from "./TechStack/TechStack";
 
 export default function FeaturedSection() {
   return (
@@ -36,19 +37,20 @@ export default function FeaturedSection() {
             proximity={64}
             inactiveZone={0.01}
           />
-          <h1 className="text-2xl font-semibold p-5 mt-16">
+          {/* <h1 className="text-2xl font-semibold p-5 mt-16">
             Currently building a <br /> JS Animation library
           </h1>
           <div className="w-[60%] absolute bottom-0 right-0">
             <img src="/b5.svg" className="object-cover" alt="" />
-          </div>
+          </div> */}
+          <TechStack />
         </div>
       </div>
       <div
         className="col-start-4 col-end-7 row-start-4 row-end-7 border-t border-[#363749dc]
        bg-[#04071d] rounded-2xl text-white"
       >
-        <div className="relative rounded-2xl">
+        <div className="relative rounded-2xl h-full">
           <GlowingEffect
             blur={0}
             borderWidth={2}
@@ -58,7 +60,7 @@ export default function FeaturedSection() {
             proximity={64}
             inactiveZone={0.01}
           />
-          <TechStack />
+          <Education />
         </div>
       </div>
       <div
