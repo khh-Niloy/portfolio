@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import FeaturedSection from "@/components/FeaturedSection/FeaturedSection";
+import Footer from "@/components/Footer/Footer";
 import Projects from "@/components/Projects/Projects";
 import { SpotBannerLight } from "@/components/SpotBannerLight/SpotBannerLight";
 import { cn } from "@/lib/utils";
@@ -17,6 +18,7 @@ export default function Home() {
         <div className="w-[85%] mx-auto">
           <FeaturedSection />
           <Projects />
+          <Footer />
         </div>
       </div>
     </>
