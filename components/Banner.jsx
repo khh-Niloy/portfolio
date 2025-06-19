@@ -8,11 +8,14 @@ export default function Banner() {
   return (
     <>
       <div className="w-full py-20 text-center">
-        <div className="flex text-center items-center w-[56%] gap-12 mx-auto">
-          <div className="w-[39%]">
+        <div
+          className="flex lg:flex-row md:flex-row flex-col text-center items-center lg:w-[75%] xl:w-[56%] sm:w-[90%] w-[85%] gap-12 mx-auto 
+        "
+        >
+          <div className="xl:w-[39%] lg:w-[35%] md:w-[65%] sm:w-[46%] w-[67%] ">
             <BannerTiltImage />
           </div>
-          <div className="w-[61%] flex flex-col items-start">
+          <div className="xl:w-[61%] lg:w-[65%] w-full flex flex-col items-start">
             <TextGenerateEffect
               words="Obsessed with the 'Why', |br| Committed to the 'How'"
               speed={50}

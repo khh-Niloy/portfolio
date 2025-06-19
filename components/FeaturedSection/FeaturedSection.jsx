@@ -9,7 +9,7 @@ import TechStack from "./TechStack/TechStack";
 
 export default function FeaturedSection() {
   return (
-    <div className="grid grid-cols-6 grid-rows-12 gap-5 w-full p-4 mx-auto">
+    <div className="grid grid-cols-6 grid-rows-12 gap-5 w-full p-4 mx-auto hidden">
       <div
         className={`bg-[url(/bg.png)] col-start-1 col-end-3 row-start-10 relative row-end-13 text-white overflow-hidden rounded-2xl border border-[#3637499d]`}
       >

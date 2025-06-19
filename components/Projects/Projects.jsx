@@ -56,7 +56,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="text-white pt-32 pb-20">
+    <div className="text-white pt-32 pb-20 hidden">
       <h1 className="text-4xl text-center font-semibold">
         A showcase of projects I have built <br />{" "}
         <span className="text-[#CBACF9]">using modern technologies.</span>
