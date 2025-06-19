@@ -56,13 +56,13 @@ export default function Projects() {
   ];
 
   return (
-    <div className="text-white pt-32 pb-20 hidden">
+    <div className="text-white pt-32 pb-20">
       <h1 className="text-4xl text-center font-semibold">
         A showcase of projects I have built <br />{" "}
         <span className="text-[#CBACF9]">using modern technologies.</span>
       </h1>
 
-      <div className="grid grid-cols-2 gap-5 mt-16">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 mt-16">
         <ProjectCard
           image={"ai.png"}
           projectName={"MadChef - Restaurant Management App"}

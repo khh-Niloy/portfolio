@@ -17,7 +17,7 @@ export default function ProjectCard({
              } relative`}
     >
       {isRunning && (
-        <div className="absolute z-50 text-center w-full top-1/2">
+        <div className="absolute z-50 text-center w-full lg:top-1/2 top-[40%]">
           <h1 className="text-sm font-medium leading-6">
             Currently working on a project using Next.js, TypeScript, <br />{" "}
             Express, and Mongoose with integrated AI features.
@@ -25,7 +25,7 @@ export default function ProjectCard({
         </div>
       )}
       <div
-        className={`bg-[#13162d] rounded-xl relative overflow-hidden h-52 mb-6 ${
+        className={`bg-[#13162d] rounded-xl relative overflow-hidden sm:h-52 h-40 mb-6 ${
           isRunning ? "blur-sm opacity-60" : ""
         }`}
       >
@@ -33,14 +33,14 @@ export default function ProjectCard({
         <img
           src={`/${image}`}
           alt={image}
-          className="absolute top-8 w-[90%] rotate-2 left-6 rounded-xl"
+          className="absolute xl:top-8 lg:top-20 top-8 sm:w-[90%] w-full rotate-2 sm:left-6 rounded-xl"
         />
       </div>
       <div className={`${isRunning ? "blur-sm opacity-60" : ""}`}>
         <h1 className="text-xl font-semibold">{projectName}</h1>
         <p className="text-[#BEC1DD] text-xs mt-2 font-light">{shortDes}</p>
 
-        <div className="flex justify-between items-center mt-4">
+        <div className="flex sm:flex-row flex-col items-start sm:gap-0 gap-3 justify-between sm:items-center mt-4">
           <div className="flex">
             {iconArr.map((icon) => (
               <div className="p-2 rounded-full border border-[#66699C6E] bg-[radial-gradient(circle,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.0)_4%,_rgba(255,255,255,0.07)_100%)]">
