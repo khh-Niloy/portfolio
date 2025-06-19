@@ -36,18 +36,22 @@ export default function Banner() {
                 </div>
               </button>
 
-              <button
-                className={`mt-5 rounded-xl py-3 px-6 bg-gradient-to-r from-[#161A31] to-[#06091F] 
-              font-light border-t border-l border-[#6971A266] text-white text-[14px] hover:bg-gradient-to-r
-               hover:from-[#22284a]
-               hover:to-[#06091F] hover:duration-300 hover:transition-all  transition-transform duration-500 
-              hover:scale-[1.02] cursor-pointer group`}
+              <a
+                href="https://drive.google.com/file/d/1tLjS4wrb4EkijVjYMIUV0FIiA6JE4tAo/view?usp=sharing"
+                target="_blank"
               >
-                <div className="flex justify-center items-center gap-2">
-                  Resume
-                  <Download className="group-hover:translate-x-0.5 transition-transform duration-500" />
-                </div>
-              </button>
+                <button
+                  className={`mt-5 rounded-xl py-3 px-6 bg-gradient-to-r from-[#161A31] to-[#06091F] 
+                font-light border-t border-l border-[#6971A266] text-white text-[14px] hover:bg-gradient-to-r
+                 hover:from-[#22284a]
+                 hover:to-[#06091F] hover:duration-300 hover:transition-all  transition-transform duration-500 
+                hover:scale-[1.02] cursor-pointer group`}
+                >
+                  <div className="flex justify-center items-center gap-2">
+                    Resume
+                  </div>
+                </button>
+              </a>
             </div>
           </div>
         </div>
