@@ -78,7 +78,7 @@ export default function Footer() {
               required
               type="email"
               placeholder="your email"
-              className="border-0 border-b-[0.5px] border-gray-700 focus:border-white placeholder:font-light focus:outline-none placeholder:text-xs"
+              className="border-0 border-b-[0.5px] border-gray-700 focus:border-white placeholder:font-light focus:outline-none placeholder:text-xs sm:mt-0 mt-10"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
