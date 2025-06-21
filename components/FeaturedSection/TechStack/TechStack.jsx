@@ -17,6 +17,7 @@ import { SiJsonwebtokens } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SiVite } from "react-icons/si";
 import { GoArrowRight } from "react-icons/go";
+// import { Element } from "react-scroll";
 
 export default function TechStack() {
   const languageArray = [
