@@ -1,13 +1,15 @@
 import React from "react";
 
-export default function TechName({ headTitle, techArray, give }) {
+export default function TechName({ headTitle, techArray, give, forMobile }) {
   return (
     <div>
       <h1 className="text-sm font-normal mb-1.5">{headTitle}</h1>
       <div
-        className={`grid ${
-          give === 2 ? "grid-cols-2" : "grid-cols-5"
-        } xl:flex items-center gap-3`}
+        className={`grid
+          ${forMobile == true ? "grid-cols-2 lg:grid-cols-5" : ""}
+          ${
+            give === 2 ? "grid-cols-2" : "lg:grid-cols-5"
+          } xl:flex items-center gap-3`}
       >
         {techArray.map(({ techName, techNameIcon, color, isLearning }) => (
           <div

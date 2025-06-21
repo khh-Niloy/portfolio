@@ -11,7 +11,7 @@ export default function FeaturedSection() {
   return (
     <div
       className="grid xl:grid-cols-12 xl:grid-rows-12 lg:grid-cols-12 lg:grid-rows-10
-   w-full p-4 mx-auto gap-5"
+   w-full mx-auto gap-5"
     >
       <div
         className="bg-[url(/bg.png)] xl:col-span-4 xl:row-span-3 xl:row-start-10

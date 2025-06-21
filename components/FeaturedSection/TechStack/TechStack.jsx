@@ -123,7 +123,7 @@ export default function TechStack() {
     <div className="px-5 pb-5 pt-3">
       <div className="flex lg:flex-row flex-col justify-between">
         <h1 className="text-2xl font-semibold mb-4">Skills</h1>
-        <div className="text-sm flex items-center">
+        <div className="text-sm flex items-center md:mb-0 mb-8">
           🟢 <GoArrowRight />{" "}
           <span className="ml-1.5">Currently working with and building</span>
         </div>
@@ -131,10 +131,14 @@ export default function TechStack() {
 
       <div className="flex flex-col gap-5 xl:mt-0 lg:mt-2">
         <div className="lg:hidden xl:block">
-          <TechName headTitle={"Languages"} techArray={languageArray} />
+          <TechName
+            headTitle={"Languages"}
+            techArray={languageArray}
+            give={2}
+          />
         </div>
 
-        <div className="lg:flex lg:flex-row flex-col gap-10 xl:hidden md:hidden">
+        <div className="lg:flex lg:flex-row flex-col gap-10 xl:hidden hidden">
           <TechName
             headTitle={"Languages"}
             techArray={languageArray}
@@ -147,6 +151,7 @@ export default function TechStack() {
         <TechName
           headTitle={"Libraries and Frameworks"}
           techArray={LibrariesandFrameworksArray}
+          forMobile={true}
         />
 
         <div className="flex xl:flex-row gap-10 xl:flex lg:hidden">
@@ -157,6 +162,7 @@ export default function TechStack() {
         <TechName
           headTitle={"Tools & Services"}
           techArray={ToolsServicesArray}
+          forMobile={true}
         />
       </div>
     </div>
