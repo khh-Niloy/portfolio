@@ -84,7 +84,7 @@ export default function TechStack() {
       isLearning: true,
     },
     {
-      techName: "Mongoose ODM",
+      techName: "Mongoose",
       techNameIcon: <SiMongoose className="text-[#880000]" />,
       color: "#00D26A",
       isLearning: true,
@@ -121,7 +121,7 @@ export default function TechStack() {
 
   return (
     <div className="px-5 pb-5 pt-3">
-      <div className="flex justify-between">
+      <div className="flex lg:flex-row flex-col justify-between">
         <h1 className="text-2xl font-semibold mb-4">Skills</h1>
         <div className="text-sm flex items-center">
           🟢 <GoArrowRight />{" "}
@@ -129,15 +129,27 @@ export default function TechStack() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-5">
-        <TechName headTitle={"Languages"} techArray={languageArray} />
+      <div className="flex flex-col gap-5 xl:mt-0 lg:mt-2">
+        <div className="lg:hidden xl:block">
+          <TechName headTitle={"Languages"} techArray={languageArray} />
+        </div>
+
+        <div className="lg:flex lg:flex-row flex-col gap-10 xl:hidden md:hidden">
+          <TechName
+            headTitle={"Languages"}
+            techArray={languageArray}
+            give={2}
+          />
+          <TechName headTitle={"Backend"} techArray={BackendArray} give={2} />
+          <TechName headTitle={"Database and ODM"} techArray={DB} give={2} />
+        </div>
 
         <TechName
           headTitle={"Libraries and Frameworks"}
           techArray={LibrariesandFrameworksArray}
         />
 
-        <div className="flex gap-10 ">
+        <div className="flex xl:flex-row gap-10 xl:flex lg:hidden">
           <TechName headTitle={"Backend"} techArray={BackendArray} />
           <TechName headTitle={"Database"} techArray={DB} />
         </div>

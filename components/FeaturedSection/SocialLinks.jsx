@@ -6,7 +6,13 @@ import { FaFacebook } from "react-icons/fa";
 export default function SocialLinks() {
   return (
     <>
-      <div className="absolute top-25 left-8 z-50 grid grid-cols-3 gap-5">
+      <div className="py-3 px-5">
+        <h1 className="text-2xl font-semibold">Let's Link Up 🔗</h1>
+        <span className="text-xs text-white/90 font-light">
+          Drop a message — I'll get back soon.
+        </span>
+      </div>
+      <div className="flex w-[50%] gap-5 mt-2 px-3">
         <div className="flex items-center justify-center flex-col gap-1.5">
           <a
             href="https://github.com/khh-Niloy"
@@ -58,15 +64,10 @@ export default function SocialLinks() {
           <h1 className="text-[10px] font-light text-white/85">Facebook</h1>
         </div>
       </div>
-      <div className="left-8 top-8 absolute leading-5 z-50">
-        <h1 className="text-2xl font-semibold">Let's Link Up 🔗</h1>
-        <span className="text-xs text-white/90 font-light">
-          Drop a message — I'll get back soon.
-        </span>
-      </div>
+
       <img
         src={"/network.png"}
-        className="w-full object-cover rounded-2xl"
+        className="absolute bottom-0 w-full rounded-2xl opacity-50"
         alt=""
       />
       <img

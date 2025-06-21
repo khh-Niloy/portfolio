@@ -1,10 +1,14 @@
 import React from "react";
 
-export default function TechName({ headTitle, techArray }) {
+export default function TechName({ headTitle, techArray, give }) {
   return (
     <div>
       <h1 className="text-sm font-normal mb-1.5">{headTitle}</h1>
-      <div className="flex items-center gap-3">
+      <div
+        className={`grid ${
+          give === 2 ? "grid-cols-2" : "grid-cols-5"
+        } xl:flex items-center gap-3`}
+      >
         {techArray.map(({ techName, techNameIcon, color, isLearning }) => (
           <div
             key={techName}
@@ -16,7 +20,7 @@ export default function TechName({ headTitle, techArray }) {
                 ? `0 0 0 1.2px ${color}`
                 : `0 0 0 0.2px ${color}`,
             }}
-            className={`flex items-center gap-1.5 rounded-md px-3 py-2`}
+            className={`flex  items-center gap-1.5 rounded-md px-3 py-2`}
           >
             {techNameIcon}
             <h1 className="text-xs font-light">{techName}</h1>

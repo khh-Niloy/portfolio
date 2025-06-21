@@ -9,24 +9,36 @@ import TechStack from "./TechStack/TechStack";
 
 export default function FeaturedSection() {
   return (
-    <div className="grid grid-cols-6 grid-rows-12 gap-5 w-full p-4 mx-auto hidden">
+    <div
+      className="grid xl:grid-cols-12 xl:grid-rows-12 lg:grid-cols-12 lg:grid-rows-10 
+   w-full p-4 mx-auto gap-5"
+    >
       <div
-        className={`bg-[url(/bg.png)] col-start-1 col-end-3 row-start-10 relative row-end-13 text-white overflow-hidden rounded-2xl border border-[#3637499d]`}
+        className="bg-[url(/bg.png)] xl:col-span-4 xl:row-span-3 xl:row-start-10
+        lg:col-span-6 lg:row-span-2 lg:col-start-7 lg:row-start-5
+      relative text-white overflow-hidden rounded-2xl border border-[#3637499d]"
       >
         <CopyEmail />
       </div>
       <div
-        className="col-start-1 relative col-end-3 overflow-hidden row-start-7 rounded-2xl  bg-[#05091e] border border-[#3637499d]
-       row-end-10 text-white"
+        className="xl:col-span-4 xl:row-span-3 xl:col-start-1 xl:row-start-7
+        lg:col-span-6 lg:row-span-2 lg:row-start-5
+      overflow-hidden rounded-2xl bg-[#05091e] border border-[#3637499d] xl:row-end-10
+       text-white"
       >
         <Target />
       </div>
       <div
-        className={` col-start-1 col-end-4 row-start-1 row-end-7 relative text-white rounded-2xl`}
+        className="xl:col-span-6 xl:row-span-6 lg:col-span-6 lg:row-span-4 relative
+       text-white rounded-2xl overflow-hidden"
       >
         <ProjectImages />
       </div>
-      <div className="col-start-3 col-end-7 relative row-start-7 rounded-2xl row-end-13 bg-[#05091e] border border-[#3637499d] text-white">
+      <div
+        className="xl:col-span-8 xl:row-span-6 xl:col-start-5 xl:row-start-7
+        lg:col-span-12 lg:row-span-4 lg:row-start-7 rounded-2xl bg-[#05091e] border
+         border-[#3637499d] text-white"
+      >
         <div className="relative h-full rounded-2xl p-2 md:rounded-3xl md:p-3">
           <GlowingEffect
             blur={0}
@@ -37,18 +49,13 @@ export default function FeaturedSection() {
             proximity={64}
             inactiveZone={0.01}
           />
-          {/* <h1 className="text-2xl font-semibold p-5 mt-16">
-            Currently building a <br /> JS Animation library
-          </h1>
-          <div className="w-[60%] absolute bottom-0 right-0">
-            <img src="/b5.svg" className="object-cover" alt="" />
-          </div> */}
           <TechStack />
         </div>
       </div>
       <div
-        className="col-start-4 col-end-7 row-start-4 row-end-7 border-t border-[#363749dc]
-       bg-[#04071d] rounded-2xl text-white"
+        className="xl:col-span-6 xl:row-span-3 xl:col-start-7 xl:row-start-4
+        lg:col-span-6 lg:row-span-2 lg:col-start-7 lg:row-start-3
+      border-t border-[#363749dc] bg-[#04071d] rounded-2xl text-white"
       >
         <div className="relative rounded-2xl h-full">
           <GlowingEffect
@@ -64,21 +71,20 @@ export default function FeaturedSection() {
         </div>
       </div>
       <div
-        className="col-start-4 col-end-7 row-start-1 relative row-end-4 text-white rounded-2xl 
-      flex items-end border-t-[1.5px] border-l-[1.5px] border-[#3637497D]"
+        className="xl:col-span-6 xl:row-span-3 xl:col-start-7
+        lg:col-span-6 lg:row-span-2 lg:col-start-7 
+      text-white rounded-2xl flex flex-col py-3 relative border-t-[1.5px] border-l-[1.5px] border-[#3637497D]"
       >
-        <div className=" rounded-2xl">
-          <GlowingEffect
-            blur={0}
-            borderWidth={2}
-            spread={40}
-            glow={true}
-            disabled={false}
-            proximity={64}
-            inactiveZone={0.01}
-          />
-          <SocialLinks />
-        </div>
+        <GlowingEffect
+          blur={0}
+          borderWidth={2}
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
+        <SocialLinks />
       </div>
     </div>
   );
