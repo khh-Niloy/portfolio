@@ -10,13 +10,13 @@ import TechStack from "./TechStack/TechStack";
 export default function FeaturedSection() {
   return (
     <div
-      className="grid xl:grid-cols-12 xl:grid-rows-12 lg:grid-cols-12 lg:grid-rows-10 
+      className="grid xl:grid-cols-12 xl:grid-rows-12 lg:grid-cols-12 lg:grid-rows-10
    w-full p-4 mx-auto gap-5"
     >
       <div
         className="bg-[url(/bg.png)] xl:col-span-4 xl:row-span-3 xl:row-start-10
         lg:col-span-6 lg:row-span-2 lg:col-start-7 lg:row-start-5
-      relative text-white overflow-hidden rounded-2xl border border-[#3637499d]"
+      relative text-white overflow-hidden rounded-2xl border border-[#3637499d] lg:h-full h-36"
       >
         <CopyEmail />
       </div>
