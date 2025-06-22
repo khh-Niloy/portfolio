@@ -1,5 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
+import ProjectIconHoverEffect from "./ProjectIconHoverEffect";
+import { LinkPreview } from "../../ui/link-preview";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export default function ProjectCard({
   image,
@@ -14,8 +17,17 @@ export default function ProjectCard({
       className={`w-full bg-gradient-to-br from-[#04071D] to-[#0C0E23]
              border border-[#3637497D] rounded-xl ${
                isRunning ? "p-0" : "p-5"
-             } relative`}
+             } relative hover:scale-[1.02] duration-500 transition-all`}
     >
+      <GlowingEffect
+        blur={0}
+        borderWidth={2}
+        spread={40}
+        glow={true}
+        disabled={false}
+        proximity={64}
+        inactiveZone={0.01}
+      />
       {isRunning && (
         <div className="absolute z-50 text-center w-full lg:top-1/2 top-[40%]">
           <h1 className="text-sm font-medium leading-6">
@@ -42,24 +54,21 @@ export default function ProjectCard({
 
         <div className="flex sm:flex-row flex-col items-start sm:gap-0 gap-3 justify-between sm:items-center mt-4">
           <div className="flex">
-            {iconArr.map((icon) => (
-              <div className="p-2 rounded-full border border-[#66699C6E] bg-[radial-gradient(circle,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.0)_4%,_rgba(255,255,255,0.07)_100%)]">
-                {icon}
-              </div>
-            ))}
+            <ProjectIconHoverEffect iconArr={iconArr} />
           </div>
 
           <div>
             {isRunning === false && (
-              <a
-                href={liveSite}
-                target="_blank"
-                className="hover:underline decoration-[#CBACF9]"
+              <LinkPreview
+                // imageSrc="/projectDivImage.png"
+                // isStatic
+                url={liveSite}
+                className="font-bold"
               >
                 <h1 className="text-[#CBACF9] text-sm flex items-center">
                   Check Live Site <ArrowUpRight />
                 </h1>
-              </a>
+              </LinkPreview>
             )}
           </div>
         </div>

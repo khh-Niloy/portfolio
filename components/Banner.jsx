@@ -23,8 +23,9 @@ export default function Banner() {
               delay={500}
             />
             <h1 className="text-[#ebf0fbf9] mt-5 text-left text-[14px] font-light">
-              Hi! I'm Niloy, a developer focused on writing clean, efficient,
-              and maintainable code that follows best practices.
+              <span className="text-lg font-semibold">Hi! I'm Niloy</span>, a
+              Full Stack developer focused on writing clean, efficient, and
+              maintainable code that follows best practices.
             </h1>
             <div className="flex gap-3 items-center">
               <ScrollButton />
