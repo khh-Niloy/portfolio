@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html data-theme="light" lang="en" className={inter.variable}>
       <body className="antialiased">
         {children}
         <Toaster position="top-center" reverseOrder={false} />
