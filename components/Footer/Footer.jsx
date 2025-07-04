@@ -15,7 +15,7 @@ export default function Footer() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    project: "",
+    message: "",
   });
 
   const form = useRef();
@@ -31,7 +31,7 @@ export default function Footer() {
         () => {
           toast.success("Your message has been sent successfully");
           e.target.reset();
-          setFormData({ name: "", email: "", project: "" });
+          setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -63,7 +63,7 @@ export default function Footer() {
         >
           <div className="space-x-10">
             <input
-              name="user_name"
+              name="name"
               required
               type="text"
               placeholder="Your name"
@@ -74,7 +74,7 @@ export default function Footer() {
               }
             />
             <input
-              name="user_email"
+              name="email"
               required
               type="email"
               placeholder="your email"
@@ -94,9 +94,9 @@ export default function Footer() {
             placeholder="your message"
             className="border-0 border-b-[0.5px] border-gray-700 focus:border-white placeholder:font-light focus:outline-none 
           placeholder:text-xs custom-scrollbar focus:outline-0 place-content-end resize-none mt-5"
-            value={formData.project}
+            value={formData.message}
             onChange={(e) =>
-              setFormData({ ...formData, project: e.target.value })
+              setFormData({ ...formData, message: e.target.value })
             }
           ></textarea>
 
