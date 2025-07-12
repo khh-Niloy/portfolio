@@ -27,6 +27,10 @@ export default function Banner() {
               Full Stack developer focused on writing clean, efficient, and
               maintainable code that follows best practices.
             </h1>
+
+            <h1 className="text-green-500 mt-1 text-sm font-semibold">
+              #OpenToWork
+            </h1>
             <div className="flex gap-3 items-center">
               <ScrollButton />
 
